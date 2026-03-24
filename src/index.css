@@ -6,12 +6,13 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  background-color: #2d3137;
 }
 
 .nav{
   height:76px;
   background-color: #212429;
-  padding: 0px 25px;
+  padding:  10px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,3 +27,31 @@ body{
 .green{
   color: #06f506;
 }
+
+.categories{
+  width: 150px;
+  background-color: rgb(63, 61, 61);
+  padding:5px;
+  border-radius: 50px;
+  
+ 
+}
+
+.categories-btn{
+  color: white;
+  display: flex;
+  align-items: center;
+  gap:5px;
+  background-color: #2d3137;
+  font-size: 15px;
+  width: 100%;
+  border-radius: 50px;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.categories:active .categories-btn{
+  opacity: 0.7;
+}
+
