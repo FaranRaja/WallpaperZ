@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import Pages from './Pages';
 
 type WallpaperProps = {
   category: string;
@@ -41,6 +42,8 @@ type PexelsResponse = {
 const Wallpapers = ({ category }: WallpaperProps) => {
   const [photos, setPhotos] = useState<Photo[]>([]);
 
+  const [page, setPage] = useState<number>(3)
+
   const fetchPhotos = async () => {
     try {
       const res = await axios.get<PexelsResponse>(
@@ -52,7 +55,7 @@ const Wallpapers = ({ category }: WallpaperProps) => {
           params: {
             query: category,
             per_page: 300000,
-            page: 1,
+            page: page,
           },
         }
       );
@@ -75,9 +78,12 @@ const Wallpapers = ({ category }: WallpaperProps) => {
       {photos.map((photo) => (
         <div key={photo.id} className='wallpaper'>
           <img src={photo.src.original} alt={photo.alt} className='wallpaper-img' loading='lazy'/>
+          <div className='img-t'>{photo.width} x {photo.height}</div>
         </div>
       ))}
     </div>
+
+    <Pages setPage={setPage} />
     </div>
   );
 };
