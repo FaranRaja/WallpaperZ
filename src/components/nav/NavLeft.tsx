@@ -1,5 +1,6 @@
 import React from 'react'
 import Categories from './Categories'
+import Search from './Search'
 import Infinity from './Infinity'
 
 const NavLeft = () => {
@@ -7,6 +8,7 @@ const NavLeft = () => {
     <div className='nav-l'>
       <Categories />
       <Infinity />
+      <Search />
     </div>
   )
 }
