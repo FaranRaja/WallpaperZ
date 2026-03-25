@@ -131,7 +131,8 @@ body{
   align-items: center;
   flex-direction: column;
   margin-top: 100px;
-  background-color: pink;
+  
+  padding:30px;
 }
 
 
@@ -139,6 +140,7 @@ body{
   display: flex;
   align-items: center;
   gap:20px;
+  justify-content: center;
   
 }
 
@@ -173,4 +175,24 @@ body{
 }
 
 
+.wallpapers{
+  display: flex;
+  gap: 90px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top:100px;
+}
+
+
+.wallpaper{
+  height: 280px;
+  width: 280px;
+  cursor: pointer;
+}
+
+.wallpaper-img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
 
