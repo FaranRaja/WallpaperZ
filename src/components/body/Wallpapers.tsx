@@ -68,12 +68,16 @@ const Wallpapers = ({ category }: WallpaperProps) => {
   }, [category]);
 
   return (
+    <div className="wallpaper-container">
+      <h1 className='category-title'>{category}</h1>
     <div className='wallpapers'>
+    
       {photos.map((photo) => (
         <div key={photo.id} className='wallpaper'>
           <img src={photo.src.original} alt={photo.alt} className='wallpaper-img' loading='lazy'/>
         </div>
       ))}
+    </div>
     </div>
   );
 };

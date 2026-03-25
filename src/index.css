@@ -180,13 +180,14 @@ body{
   gap: 90px;
   align-items: center;
   flex-wrap: wrap;
-  margin-top:100px;
+  margin-top:20px;
+  margin-left: 100px;
 }
 
 
 .wallpaper{
-  height: 280px;
-  width: 280px;
+  height: 225px;
+  width: 350px;
   cursor: pointer;
 }
 
@@ -194,5 +195,23 @@ body{
   width: 100%;
   object-fit: cover;
   height: 100%;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+.wallpaper-img:hover  {
+  transform: scale(1.1); 
+  border: 1px solid #90ff00;
+}
+
+.category-title{
+  margin-top: 100px;
+  margin-left:100px;
+  border-left: 4px solid #90ff00;
+  padding-left: 10px;
+  font-weight: bolder;
+  font-family: 'Outfit', sans-serif;
+  font-size: 30px;
+ 
 }
 
