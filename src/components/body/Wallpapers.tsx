@@ -54,7 +54,7 @@ const Wallpapers = ({ category }: WallpaperProps) => {
           },
           params: {
             query: category,
-            per_page: 5,
+            per_page: 20,
             page: page,
           },
         }
@@ -68,7 +68,7 @@ const Wallpapers = ({ category }: WallpaperProps) => {
 
   useEffect(() => {
     fetchPhotos();
-  }, [category]);
+  }, [category,page]);
 
   return (
     <div className="wallpaper-container">
