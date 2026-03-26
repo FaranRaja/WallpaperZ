@@ -54,7 +54,7 @@ const Wallpapers = ({ category }: WallpaperProps) => {
           },
           params: {
             query: category,
-            per_page: 300000,
+            per_page: 5,
             page: page,
           },
         }
